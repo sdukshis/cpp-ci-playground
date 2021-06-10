@@ -2,7 +2,7 @@ dist: focal
 language: cpp
 
 script:
-  - mkdir build && cd build
-  - cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=ON ..
-  - find .. -name "*.cpp" -print0 | xargs -0 clang-tidy -p .
+  - mkdir build && pushd build
+  - cmake ..
+  # - find .. -name "*.cpp" -print0 | xargs -0 clang-tidy -p .
   - cmake --build .
