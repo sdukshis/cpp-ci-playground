@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.6)
 
 project(ci-test CXX)
 
-set(CMAKE_CXX_CLANG_TIDY clang-tidy --warnings-as-errors=*)
+# set(CMAKE_CXX_CLANG_TIDY clang-tidy --warnings-as-errors=*)
 
 add_executable(ci-test
     virtual_dtor.cpp
