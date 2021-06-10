@@ -1,0 +1,7 @@
+language: cpp
+
+script:
+  - mkdir build && cd build
+  - cmake -DCMAKE_COMPILE_OPTIONS=ON ..
+  - find .. -name "*.cpp" -print0 | xargs -0 clang-tidy -p .
+  - cmake --build .
