@@ -28,7 +28,5 @@ private:
 };
 
 int main() {
-    Base *ptr = new Derived;
-    ptr->foo();
-    delete ptr;
+    Derived d;
 }
