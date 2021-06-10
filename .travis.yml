@@ -2,6 +2,6 @@ language: cpp
 
 script:
   - mkdir build && cd build
-  - cmake -DCMAKE_COMPILE_OPTIONS=ON ..
+  - cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=ON ..
   - find .. -name "*.cpp" -print0 | xargs -0 clang-tidy -p .
   - cmake --build .
